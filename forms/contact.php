@@ -9,7 +9,15 @@
 
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
-  
+
+
+  $contact->smtp = array(
+    'host' => 'https://gonzlezjg.github.io/Jose-G-Portfolio/',
+    'username' => 'example',
+    'password' => 'pass',
+    'port' => '587'
+    );
+
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
